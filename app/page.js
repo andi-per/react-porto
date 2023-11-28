@@ -1,6 +1,6 @@
 "use client";
 
-import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsFillMoonStarsFill, BsSunFill } from "react-icons/bs";
 import { AiFillGithub, AiFillYoutube, AiFillInstagram } from "react-icons/ai";
 import Image from "next/image";
 import devandi from "../public/devandi2.png";
@@ -16,26 +16,33 @@ import web6 from "../public/web6.png";
 import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   return (
     <div className={darkMode ? "dark" : ""}>
-      <main className="dark:bg-gray-900 bg-gray-200 px-10 md:px-20 lg:px-40 ">
+      <main className="transition-colors dark:bg-gray-900 bg-gray-200 px-10 md:px-20 lg:px-40 ">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
             <h1 className="text-xl font-burtons dark:text-white">AndiPer</h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
-                  className="cursor-pointer text-2xl"
-                  style={{ color: darkMode ? "white" : "" }}
-                  onClick={() => setDarkMode(!darkMode)}
-                />
+                {darkMode ? (
+                  <BsSunFill
+                    className="cursor-pointer text-2xl"
+                    style={{ color: "white" }}
+                    onClick={() => setDarkMode(!darkMode)}
+                  />
+                ) : (
+                  <BsFillMoonStarsFill
+                    className="cursor-pointer text-2xl"
+                    onClick={() => setDarkMode(!darkMode)}
+                  />
+                )}
               </li>
               <li>
                 <a
                   href="cvandi.pdf"
                   download={"cv-andipermana.pdf"}
-                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
+                  className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 dark:shadow-[0_0_10px_theme('colors.teal.500')]"
                 >
                   Resume
                 </a>
@@ -43,7 +50,16 @@ export default function Home() {
             </ul>
           </nav>
           <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-teal-500 font-medium md:text-6xl">
+            <h2
+              className="text-5xl py-2 text-shadow-lg text-teal-500 text-shadow-md font-medium md:text-6xl dark:text-shadow-lg"
+              style={
+                darkMode
+                  ? {
+                      textShadow: "2px 2px 10px rgba(20, 184, 166, 0.5)",
+                    }
+                  : {}
+              }
+            >
               Andi Permana
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
@@ -82,7 +98,7 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:flex gap-10 justify-around">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white dark:hover:shadow-[0_0_20px_theme('colors.teal.200')]">
               <Image src={code} alt="code" className="mx-auto" />
               <h3 className="text-lg font-burtons font-medium pt-8 pb-2">
                 FRONTEND
@@ -98,7 +114,7 @@ export default function Home() {
               <p className="text-gray-800 py-1">Tailwind CSS</p>
               <p className="text-gray-800 py-1">Bootstrap CSS</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white dark:hover:shadow-[0_0_20px_theme('colors.teal.200')]">
               <Image
                 src={backend}
                 alt="backend"
