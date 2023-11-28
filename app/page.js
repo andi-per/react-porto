@@ -7,12 +7,7 @@ import devandi from "../public/devandi2.png";
 import devandisleep from "../public/devandisleep.png";
 import code from "../public/code.png";
 import backend from "../public/backend.png";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
+import web1 from "../public/web1.jpg";
 import { useState } from "react";
 
 export default function Home() {
@@ -40,8 +35,8 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="cvandi.pdf"
-                  download={"cv-andipermana.pdf"}
+                  href="https://drive.google.com/file/d/1uInfLX8DHd7MhV_GwcDao2WxR933yHPL/view?usp=sharing"
+                  target="_blank"
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 dark:shadow-[0_0_10px_theme('colors.teal.500')]"
                 >
                   Resume
@@ -71,9 +66,27 @@ export default function Home() {
             </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <AiFillGithub style={{ color: darkMode ? "white" : "" }} />
-            <AiFillYoutube style={{ color: darkMode ? "white" : "" }} />
-            <AiFillInstagram style={{ color: darkMode ? "white" : "" }} />
+            <a href="https://github.com/andi-per" target="_blank">
+              <AiFillGithub
+                style={{ color: darkMode ? "white" : "" }}
+                className="transition-transform transform hover:scale-125"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCyjUVf4dhB6lSmkatwhXXYg"
+              target="_blank"
+            >
+              <AiFillYoutube
+                style={{ color: darkMode ? "white" : "" }}
+                className="transition-transform transform hover:scale-125"
+              />
+            </a>
+            <a href="https://www.instagram.com/andi_permn/" target="_blank">
+              <AiFillInstagram
+                style={{ color: darkMode ? "white" : "" }}
+                className="transition-transform transform hover:scale-125"
+              />
+            </a>
           </div>
           <div className="relative bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 mb-10 mx-auto overflow-hidden md:h-96 md:w-96">
             <Image
@@ -151,7 +164,7 @@ export default function Home() {
               <Image
                 src={web1}
                 alt="project_1"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.blue.300')]"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
@@ -159,9 +172,9 @@ export default function Home() {
             </div>
             <div className="basis-1/3 flex-1">
               <Image
-                src={web2}
+                src={web1}
                 alt="project_2"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.blue.300')]"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
@@ -169,9 +182,9 @@ export default function Home() {
             </div>
             <div className="basis-1/3 flex-1">
               <Image
-                src={web3}
+                src={web1}
                 alt="project_3"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.green.300')]"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
@@ -179,29 +192,29 @@ export default function Home() {
             </div>
             <div className="basis-1/3 flex-1">
               <Image
-                src={web5}
-                alt="project_5"
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web6}
-                alt="project_6"
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web4}
+                src={web1}
                 alt="project_4"
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.green.300')]"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1">
+              <Image
+                src={web1}
+                alt="project_5"
+                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.orange.300')]"
+                width={"100%"}
+                height={"100%"}
+                layout="responsive"
+              />
+            </div>
+            <div className="basis-1/3 flex-1">
+              <Image
+                src={web1}
+                alt="project_6"
+                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.orange.300')]"
                 width={"100%"}
                 height={"100%"}
                 layout="responsive"
