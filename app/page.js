@@ -8,6 +8,9 @@ import devandisleep from "../public/devandisleep.png";
 import code from "../public/code.png";
 import backend from "../public/backend.png";
 import web1 from "../public/web1.jpg";
+import andiblog from "../public/andiblog.png";
+import promptopia from "../public/promptopia.png";
+
 import { useState } from "react";
 
 export default function Home() {
@@ -161,24 +164,36 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1">
-              <Image
-                src={web1}
-                alt="project_1"
-                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.blue.300')]"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-              />
+              <a
+                href="https://nextjs-14-blog-ecru.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={andiblog}
+                  alt="project_1"
+                  className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.blue.300')]"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                src={web1}
-                alt="project_2"
-                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.blue.300')]"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-              />
+              <a
+                href="https://nextjs-ideas-sharing.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={promptopia}
+                  alt="project_2"
+                  className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.blue.300')]"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
               <Image
