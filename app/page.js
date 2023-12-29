@@ -15,6 +15,9 @@ import { useState } from "react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+
+  const changeTheme = () => setDarkMode((darkMode) => !darkMode);
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <main className="transition-colors dark:bg-gray-900 bg-gray-200 px-10 md:px-20 lg:px-40 ">
@@ -24,15 +27,15 @@ export default function Home() {
             <ul className="flex items-center">
               <li>
                 {darkMode ? (
-                  <BsSunFill
-                    className="cursor-pointer text-2xl"
-                    style={{ color: "white" }}
-                    onClick={() => setDarkMode(!darkMode)}
-                  />
-                ) : (
                   <BsFillMoonStarsFill
                     className="cursor-pointer text-2xl"
-                    onClick={() => setDarkMode(!darkMode)}
+                    style={{ color: "white" }}
+                    onClick={changeTheme}
+                  />
+                ) : (
+                  <BsSunFill
+                    className="cursor-pointer text-2xl"
+                    onClick={changeTheme}
                   />
                 )}
               </li>
