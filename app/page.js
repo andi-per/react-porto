@@ -10,6 +10,7 @@ import backend from "../public/backend.png";
 import web1 from "../public/web1.jpg";
 import andiblog from "../public/andiblog.png";
 import promptopia from "../public/promptopia.png";
+import simpleWeather from "../public/simple-weather.png";
 
 import { useState } from "react";
 
@@ -167,6 +168,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
             <div className="basis-1/3 flex-1">
+              {/* https://nextjs-14-blog-ecru.vercel.app/ */}
               <a
                 href="https://nextjs-14-blog-ecru.vercel.app/"
                 target="_blank"
@@ -183,6 +185,7 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
+              {/* https://nextjs-ideas-sharing.vercel.app/ */}
               <a
                 href="https://nextjs-ideas-sharing.vercel.app/"
                 target="_blank"
@@ -199,14 +202,21 @@ export default function Home() {
               </a>
             </div>
             <div className="basis-1/3 flex-1">
-              <Image
-                src={web1}
-                alt="project_3"
-                className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.green.300')]"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-              />
+              {/* https://next-simple-weather.vercel.app/ */}
+              <a
+                href="https://next-simple-weather.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={simpleWeather}
+                  alt="project_3"
+                  className="rounded-lg object-cover dark:hover:shadow-[0_0_20px_theme('colors.green.300')]"
+                  width={"100%"}
+                  height={"100%"}
+                  layout="responsive"
+                />
+              </a>
             </div>
             <div className="basis-1/3 flex-1">
               <Image
